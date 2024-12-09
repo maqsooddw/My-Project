@@ -25,7 +25,7 @@ const Secondblock = () => {
         Featured Products
       </h3>
 
-      <div className="grid grid-cols-[200px,200px,200px,200px] justify-center mt-[100px]">
+      <div className="grid sm:grid-cols-[200px] md:grid-cols-[200px,200px] lg:grid-cols-[200px,200px,200px,200px] justify-center mt-[100px]">
         {/* 1st line of div */}
 
         {/* item-1 */}
