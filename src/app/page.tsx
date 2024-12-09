@@ -1,8 +1,12 @@
+import Firstblock from "./components/Firstblock";
+import Secondblock from "./components/Secondblock";
+
 export default function Home() {
   return (
-<div className="flex">
+<div>
 
-<p className="flex">hello form page tsx main children</p>
+<Firstblock/>
+<Secondblock/>
 </div>
   
   );
