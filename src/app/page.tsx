@@ -4,6 +4,7 @@ import Firstblock from "./components/Firstblock";
 import Forthblock from "./components/Forthblock";
 import Secondblock from "./components/Secondblock";
 import Thirdblock from "./components/Thirdblock";
+import Topcategories from "./components/Topcategories";
 import Trandingproducts from "./components/Trandingproducts";
 import {images, images2} from "./imgvar"
 
@@ -21,6 +22,7 @@ export default function Home() {
 <Fifthblock />
 <Trandingproducts />
 <DiscountItem />
+<Topcategories />
 
 
 </div>

@@ -23,7 +23,7 @@ const Firstblock = () => {
   {/* Set One */}
   <div className="flex flex-col lg:flex-row items-start justify-start p-6 w-full">
     {/* Image Section */}
-    <div className="flex items-center justify-center lg:ml-[-250px] lg:absolute md:relative lg:w-1/2">
+    <div className="flex items-center justify-center lg:ml-[-275px] lg:absolute md:relative lg:w-1/2">
       <img
         src="/image 32.png"
         alt="Hanging lamp"

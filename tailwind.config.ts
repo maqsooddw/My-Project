@@ -13,6 +13,7 @@ const config: Config = {
       },
       letterSpacing: {
         '1-5': '1.5%', // Custom letter spacing value
+        '2': '2%', // Custom letter spacing value
       },
       colors: {
         productBg: '#f1f0ff', // Add your custom background color
