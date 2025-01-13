@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      lineHeight: {
+        'custom': '81.98px', // Define a custom line height
+      },
+      letterSpacing: {
+        '1-5': '1.5%', // Custom letter spacing value
+      },
+      colors: {
+        productBg: '#f1f0ff', // Add your custom background color
+        heading: "#151875",
       },
     },
   },

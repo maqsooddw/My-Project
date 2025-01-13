@@ -1,34 +1,80 @@
 import React from 'react'
+import { Josefin_Sans } from 'next/font/google';
+import { Lato } from 'next/font/google';
+import Link from 'next/link';
+
+const josefinSans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
 
 const Firstblock = () => {
   return (
     <div>
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-    <div className="relative flex flex-col md:flex-row items-center bg-purple-100 p-8 rounded-lg shadow-lg max-w-6xl">
-        
-        <div className="flex-1 flex flex-col items-start">
-            <img src="/image 32.png" alt="Hanging lamp" className="w-24 h-24 mb-4" />
-            <p className="text-pink-500 font-semibold mb-2">Best Furniture For Your Castle....</p>
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">New Furniture Collection Trends in 2020</h1>
-            <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.</p>
-            <button className="bg-pink-500 text-white px-6 py-3 rounded-[3px] font-semibold">Shop Now</button>
-        </div>
-        
-        
-        <div className="flex-1 flex justify-center items-center relative mt-8 md:mt-0">
-            <img src="/Shell-Shaped-Armchair-Pink-Velvet-Fabric-One-Seater-Sofa-for-Living-Room 1.png" alt="Pink chair" className="w-80 h-80 object-cover" />
-            <div className="absolute top-0 right-0 bg-blue-500 text-white text-center rounded-full p-4 transform translate-x-1/2 -translate-y-1/2">
-                <p className="text-lg font-bold">50% off</p>
-            </div>
-        </div>
+    
+    
+    <div className="flex flex-col lg:flex-row p-2 relative space-y-8 lg:space-y-0 lg:space-x-2">
+  {/* Set One */}
+  <div className="flex flex-col lg:flex-row items-start justify-start p-6 w-full">
+    {/* Image Section */}
+    <div className="flex items-center justify-center lg:ml-[-250px] lg:absolute md:relative lg:w-1/2">
+      <img
+        src="/image 32.png"
+        alt="Hanging lamp"
+        className="lg:w-[387px] lg:h-[387px] md:w-[200px] md:h-[200px]"
+      />
     </div>
-    <div className="flex space-x-2 mt-8">
-        <span className="w-3 h-3 bg-pink-500 rounded-full"></span>
-        <span className="w-3 h-3 bg-gray-300 rounded-full"></span>
-        <span className="w-3 h-3 bg-gray-300 rounded-full"></span>
+
+{/* Text Content Section */}
+<div className="flex flex-col items-start mt-10 lg:mt-40 lg:ml-[155px] p-6">
+  <p className="text-[#fb2e86] font-bold leading-[20px] md:text-[12px] lg:text-[14px] md:leading-[24px] lg:leading-[28px]">
+    Best Furniture For Your Castle....
+  </p>
+  <h1 className="text-[#072b4b] text-[28px] md:text-[40px] lg:text-[53px] font-bold leading-tight tracking-wide text-nowrap">
+    New Furniture Collection <br /> Trends in 2020
+  </h1>
+  <p className="text-[14px] md:text-[16px] lg:text-[18px] text-[#8a8fb9] font-medium mt-4 mb-6">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est
+    adipiscing in phasellus non in justo.
+  </p>
+  <button className="bg-[#fb2e86] text-white px-6 py-3 rounded font-semibold">
+    Shop Now
+  </button>
+</div>
+
+
+  </div>
+  {/* Set Two */}
+  <div className="flex flex-col md:flex-row items-center justify-center relative w-full lg:w-1/2 p-6">
+    {/* Pink Chair Image */}
+    <div className="relative lg:ml-[-140px] mt-12">
+      <img
+        src="/Shell-Shaped-Armchair-Pink-Velvet-Fabric-One-Seater-Sofa-for-Living-Room 1.png"
+        alt="Pink chair"
+        className="w-[300px] lg:w-[629px] h-auto  z-10"
+      />
+      {/* 50% Logo */}
+      <img
+        src="/50plogo.png"
+        alt="50% logo"
+        className="flex justify-end items-end absolute top-0 left-0 lg:left-auto lg:right-0 w-[100px] lg:w-[136.56px] h-auto z-20 jus"
+      />
     </div>
   </div>
+</div>
 
+{/* Pagination Dots */}
+<div className="flex space-x-2 mt-8 items-center justify-center">
+  <span className="w-3 h-3 bg-[#fb2e86] rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>
+  <span className="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>
+  <span className="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>
+</div>
 
   </div>
   )

@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <div>
       {/* Header container */}
-      <div className={`flex ${josefinSans.className} font-semibold flex w-[1920] h-[44px] bg-[#7e33e0] text-[#ffffff] items-center justify-evenly `}>
+      <div className={`flex ${josefinSans.className} font-semibold flex w-full h-[44px] bg-[#7e33e0] text-[#ffffff] items-center justify-evenly `}>
         {/* Left Section: Email and Phone */}
         <div className='flex'>
           {/* Email Icon */}
