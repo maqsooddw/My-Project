@@ -150,6 +150,35 @@ const Topcategories = () => {
       </div> {/* end product div */} 
 
 
+      <div className="relative w-full h-[462px]">
+  {/* Image Background */}
+  <img
+    src="/Rectangle 102.png"
+    alt="rectangle pic"
+    className="absolute w-full h-full z-0"
+  />
+  {/* Content Overlay */}
+  <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
+    <div className="w-[574px] h-[185px]  bg-opacity-80 rounded-[2px] p-4">
+      <ul className="text-center space-y-4">
+        <li className={`${josefinSans.className} text-[35px] leading-[54.25px] tracking-1-5 font-semibold text-heading`}>
+          Get Latest Update By Subscribe
+        </li>
+        <li className={`${josefinSans.className} text-[35px] leading-[54.25px] tracking-1-5 font-semibold text-heading`}>Our Newsletter</li>
+        <li>
+          <button className="w-[173px] h-[49px] rounded-[2px] text-[#fee5f0] bg-[#fb2e86]"> 
+            Shop Now
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{/* start signature icon div */} <div className='flex items-center justify-center w-full h-[93px] mt-20'> <div className='w-[904px] h-[93px]'>
+   <img src='/image 1174.png' alt='signature div' className='w-full h-full'/>
+</div>
+</div> 
 
     </div>
   )

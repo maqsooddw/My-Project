@@ -1,3 +1,4 @@
+import Blog from "./components/Blog";
 import DiscountItem from "./components/DiscountItem";
 import Fifthblock from "./components/Fifthblock";
 import Firstblock from "./components/Firstblock";
@@ -23,6 +24,7 @@ export default function Home() {
 <Trandingproducts />
 <DiscountItem />
 <Topcategories />
+<Blog />
 
 
 </div>
