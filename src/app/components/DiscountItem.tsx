@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { FaCheck } from "react-icons/fa6";
 import { Josefin_Sans } from 'next/font/google';
 import { Lato } from 'next/font/google';
-import styles from '/LegendsList.module.css';
-import Link from 'next/link';
 
 const josefinSans = Josefin_Sans({
   subsets: ['latin'],
@@ -17,66 +15,90 @@ const lato = Lato({
 
 const DiscountItem = () => {
   return (
-    <div className='flex flex-col justify-center items-center'> 
+    <div className='flex flex-col justify-center items-center px-4 sm:px-6 lg:px-16'> 
+      {/* Heading */}
+      <div className={`${josefinSans.className} text-heading text-center text-[28px] sm:text-[32px] md:text-[36px] lg:text-[42px] leading-[49.22px] font-bold mt-8 sm:mt-12`}>
+        <h3>Discount Item</h3>
+      </div>
 
-{/* heading div */}<div className={`${josefinSans.className} text-heading text-[42px] leading-[49.22px] text-center font-bold mt-12`}><h3>Discount Item</h3></div>
-
-{/* start discount item main product div */} <div className='relative flex w-[1214PX] h-[597PX]'>
-
-    <div>
-
-    {/* sub menue */} <div className='flex items-center absolute ml-[430px] justify-center text-heading z-10'>
-        <ul className={`${lato.className} flex gap-4 text-center text-[18px] leading-[21.6px] font-[400px]`}>
-            <li className=' hover:text-[#fb2e86] hover:underline hover:cursor-pointer'>Wood Chair</li>
-            <li className=' hover:text-[#fb2e86] hover:underline hover:cursor-pointer'>Plastic Chair</li>
-            <li className=' hover:text-[#fb2e86] hover:underline hover:cursor-pointer'>Sofa Colletion</li>
-        </ul>
-    </div>
-
-    {/* text box */} <div className=''>
-        <div className='mt-10'> 
-            <h3 className={`${josefinSans.className} text-heading text-[35px] leading-[46.2px] tracking-1-5`}>20% Discount Of All Products</h3>
-            <p className={`${josefinSans.className} text-[#fb2e86] text-[21px] leading-[27.72px] tracking-1-5 my-6`}>Eams Sofa Compact</p>
-            <p className={`${lato.className} text-[#b7bacb] text-[17px] leading-[30px] tracking-2 font-[400px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget<br />feugiat habitasse nec, bibendum condimentum.</p>
-        </div>
-        <div className='mt-9'>
-            <ul className='flex text-center items-center justify-left gap-3 '>
-                {/* <li> <img src='/Vector (1)A.png'alt='tick' className='w-[16px] h-[11px]'/></li> */}
-                <li className='w-[16px] h-[11px] border-[2px] text-[#7569b2]'><FaCheck /></li>
-                <li className={`${lato.className} text-[#b7bacb] text-[17px] leading-[30px] tracking-2 font-[400px]`}>Material expose like metals</li> 
-                <li className='w-[16px] h-[11px] border-[2px] text-[#7569b2]'><FaCheck /></li>
-                <li className={`${lato.className} text-[#b7bacb] text-[17px] leading-[30px] tracking-2 font-[400px]`}>Clear lines and geomatric figures</li>
+      {/* Main Discount Item Section */}
+      <div className='relative flex flex-col lg:flex-row w-full max-w-7xl mx-auto mt-8 lg:mt-12'>
+        {/* Text Section */}
+        <div className='flex-1 px-4 sm:px-8 lg:px-12'>
+          {/* Sub Menu */}
+          <div className='flex justify-center lg:justify-start mb-6'>
+            <ul className={`${lato.className} flex gap-4 text-[14px] sm:text-[16px] md:text-[18px] font-[400]`}>
+              <li className='hover:text-[#fb2e86] hover:underline cursor-pointer'>Wood Chair</li>
+              <li className='hover:text-[#fb2e86] hover:underline cursor-pointer'>Plastic Chair</li>
+              <li className='hover:text-[#fb2e86] hover:underline cursor-pointer'>Sofa Collection</li>
             </ul>
+          </div>
 
-            <ul className='flex text-center items-center justify-left gap-3 '>
-                {/* <li> <img src='/Vector (1)A.png'alt='tick' className='w-[16px] h-[11px]'/></li> */}
-                <li className='w-[16px] h-[11px] border-[2px] text-[#7569b2]'><FaCheck /></li>
-                <li className={`${lato.className} text-[#b7bacb] text-[17px] leading-[30px] tracking-2 font-[400px]`}>Simple neutral colours.</li> 
-                <li className='w-[16px] h-[11px] border-[2px] text-[#7569b2] ml-8'><FaCheck /></li>
-                <li className={`${lato.className} text-[#b7bacb] text-[17px] leading-[30px] tracking-2 font-[400px]`}>Material expose like metals</li>
+          {/* Text Content */}
+          <div>
+            <h3 className={`${josefinSans.className} text-heading text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] leading-[1.4]`}>
+              20% Discount Of All Products
+            </h3>
+            <p className={`${josefinSans.className} text-[#fb2e86] text-[18px] sm:text-[20px] lg:text-[21px] leading-[1.6] mt-4`}>
+              Eams Sofa Compact
+            </p>
+            <p className={`${lato.className} text-[#b7bacb] text-[14px] sm:text-[16px] md:text-[17px] leading-[1.8] mt-4`}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu eget<br />
+              feugiat habitasse nec, bibendum condimentum.
+            </p>
+          </div>
+
+          {/* Features List */}
+          <div className='flex mt-6 w-[530px] h-fit justify-evenly items-center relative'>
+            <ul className='flex flex-wrap justify-evenly items-center relative gap-4'>
+              <li className='flex items-center gap-2 w-[230px] h-fit'>
+                <FaCheck className='text-[#7569b2]' />
+                <span className={`${lato.className} text-[#b7bacb] text-[14px] sm:text-[16px] md:text-[17px] leading-[1.8]`}>
+                  Material expose like metals
+                </span>
+              </li>
+              <li className='flex items-center gap-2 w-[270px] h-fit'>
+                <FaCheck className='text-[#7569b2]' />
+                <span className={`${lato.className} text-[#b7bacb] text-[14px] sm:text-[16px] md:text-[17px] leading-[1.8]`}>
+                  Clear lines and geometric figures
+                </span>
+              </li>
+              <li className='flex items-center gap-2 w-[230px] h-fit'>
+                <FaCheck className='text-[#7569b2]' />
+                <span className={`${lato.className} text-[#b7bacb] text-[14px] sm:text-[16px] md:text-[17px] leading-[1.8]`}>
+                  Simple neutral colors
+                </span>
+              </li>
+              <li className='flex items-center gap-2 w-[270px] h-fit'>
+                <FaCheck className='text-[#7569b2]' />
+                <span className={`${lato.className} text-[#b7bacb] text-[14px] sm:text-[16px] md:text-[17px] leading-[1.8]`}>
+                Material expose like metals
+                </span>
+              </li>
             </ul>
-            {/* start button div */} <div>
-                <button className={`${josefinSans.className} w-[200px] h-[57px] rounded-[2px]  text-[#FFFFFF] bg-[#fb2e86] text-[17px] leading-[19.92px] tracking-2 my-6`}>Shop Now</button>
-            </div>
-      
-    </div>
-    </div>
-
-    </div>
-        {/* image div */} <div className="relative flex justify-center items-center  z-0">
-               {/* Red Circle Background */}
-      <div className="absolute bg-[#fcecf1] rounded-full w-[400px] h-[400px] z-0"></div>
-            <img src='/tortuga-01-b 1.png' alt='wood chair' className='w-[669px] h-[597px] z-10'/>
+          </div>
+{/* Material expose like metals */}
+          {/* Shop Now Button */}
+          <div className='mt-6'>
+            <button className={`${josefinSans.className} w-full sm:w-[200px] h-[48px] sm:h-[57px] bg-[#fb2e86] text-white rounded-[2px] text-[16px] sm:text-[17px] font-bold`}>
+              Shop Now
+            </button>
+          </div>
         </div>
 
-{/* end discount item main product div */}</div>
-
-
-      {/* main Div */} <div>
-
+        {/* Image Section */}
+        <div className="relative flex justify-center items-center z-0">
+  {/* Red Circle Background */}
+  <div className="absolute bg-[#fcecf1] rounded-full w-[400px] h-[400px] z-0"></div>
+  <img
+    src="/tortuga-01-b 1.png"
+    alt="wood chair"
+    className="w-[669px] h-[597px] z-10 lg:w-[669px] lg:h-[597px] md:w-[500px] md:h-[450px] sm:w-[400px] sm:h-[350px]"
+  />
+</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DiscountItem
+export default DiscountItem;
