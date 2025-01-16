@@ -34,7 +34,7 @@ const Thirdblock: React.FC<ThirdblockProps> = ({ images }) => {
           <img
             src={image.src}
             alt={image.alt}
-            className="w-full max-w-[223px] h-[277px] z-0 bg-blue-700"
+            className="w-full max-w-[223px] h-[277px] z-0"
           />
           <div className="flex text-center mt-4 justify-center">
             <ul className="flex flex-col sm:flex-row items-center">

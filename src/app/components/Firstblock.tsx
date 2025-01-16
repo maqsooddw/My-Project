@@ -19,7 +19,7 @@ const Firstblock = () => {
     <div>
     
     
-    <div className="flex flex-col lg:flex-row p-2 relative space-y-8 lg:space-y-0 lg:space-x-2">
+    <div className="flex flex-col lg:flex-row p-2 relative space-y-8 lg:space-y-0 lg:space-x-2 bg-slate-500">
   {/* Set One */}
   <div className="flex flex-col lg:flex-row items-start justify-start p-6 w-full">
     {/* Image Section */}
