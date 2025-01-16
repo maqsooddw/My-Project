@@ -18,28 +18,31 @@ const Firstblock = () => {
   return (
     <div>
     
-    
-    <div className="flex flex-col lg:flex-row p-2 relative space-y-8 lg:space-y-0 lg:space-x-2 bg-slate-500">
+    {/*  */}
+    <div className="flex flex-col bg-[#f2f0ff] lg:flex-row p-2 relative space-y-8 lg:space-y-0 lg:space-x-2">
+  {/* text and lamp */} <div className='flex relative'>
+  
   {/* Set One */}
-  <div className="flex flex-col lg:flex-row items-start justify-start p-6 w-full">
+    <div className="flex lg:flex-row items-start justify-start p-2 w-full">
     {/* Image Section */}
-    <div className="flex items-center justify-center lg:ml-[-275px] lg:absolute md:relative lg:w-1/2">
+    <div className="flex lg:ml-[-0px] lg:absolute md:relative lg:w-1/4">
       <img
         src="/image 32.png"
         alt="Hanging lamp"
-        className="lg:w-[387px] lg:h-[387px] md:w-[200px] md:h-[200px]"
+        className="lg:w-[387px] lg:h-[387px] md:w-[200px] md:h-[200px] z-0"
       />
+
     </div>
 
 {/* Text Content Section */}
-<div className="flex flex-col items-start mt-10 lg:mt-40 lg:ml-[155px] p-6">
-  <p className="text-[#fb2e86] font-bold leading-[20px] md:text-[12px] lg:text-[14px] md:leading-[24px] lg:leading-[28px]">
+<div className="flex flex-col items-start mt-10 lg:mt-40 lg:ml-[155px] p-6 z-10">
+  <p className={`${lato.className} text-[#fb2e86] font-bold leading-[20px] md:text-[12px] lg:text-[14px] md:leading-[24px] lg:leading-[28px] `}>
     Best Furniture For Your Castle....
   </p>
-  <h1 className="text-[#072b4b] text-[28px] md:text-[40px] lg:text-[53px] font-bold leading-tight tracking-wide text-nowrap">
+  <h1 className={`${josefinSans.className} text-[#072b4b] text-[28px] md:text-[40px] lg:text-[53px] font-bold lg:leading-[81.98px] lg:tracking-1-5 text-nowrap`}>
     New Furniture Collection <br /> Trends in 2020
   </h1>
-  <p className="text-[14px] md:text-[16px] lg:text-[18px] text-[#8a8fb9] font-medium mt-4 mb-6">
+  <p className={`${lato.className} text-[14px] md:text-[16px] lg:text-[18px] text-[#8a8fb9] font-medium mt-4 mb-6 `}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est
     adipiscing in phasellus non in justo.
   </p>
@@ -48,6 +51,8 @@ const Firstblock = () => {
   </button>
 </div>
 
+
+  </div>
 
   </div>
   {/* Set Two */}
@@ -67,10 +72,11 @@ const Firstblock = () => {
       />
     </div>
   </div>
+
 </div>
 
-{/* Pagination Dots */}
-<div className="flex space-x-2 mt-8 items-center justify-center">
+        {/* Pagination Dots */}
+        <div className="flex  space-x-2 items-start justify-center h-20 z-10 bg-[#f2f0ff]">
   <span className="w-3 h-3 bg-[#fb2e86] rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>
   <span className="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>
   <span className="w-3 h-3 bg-gray-300 rounded-full cursor-pointer hover:bg-[#fb2e86]"></span>

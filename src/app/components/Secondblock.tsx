@@ -19,19 +19,19 @@ const lato = Lato({
 const Secondblock = () => {
   return (
     // main div of second block
-    <div className={`${josefinSans.className} text-[#1a0b5b]`}>
+    <div className={`${josefinSans.className} text-[#1a0b5b] mt-20`}>
       <h3
-        className={`text-[42px] h-[42px] w-full mb-4 text-center font-semibold gap-[2px]`}
+        className={`text-[42px] h-[42px] w-full  mb-4 text-center font-semibold gap-[2px]`}
       >
         Featured Products
       </h3>
-      <div className="flex flex-wrap justify-center gap-4 lg:h-[361px] md:h-auto md:w-auto relative">
+      <div className="flex flex-wrap justify-center gap-4 lg:h-[361px] md:h-auto md:w-auto relative bg-gre">
   {/* 1st item */}
-  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px]">
-    <div className="mt-12">
+  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px] bg-[#f6f7fb] ">
+    <div className="mt-12 ">
       <img src="/image 1168.png" alt="phone logo" className="w-[178px] h-[178px] mt-[4px]" />
     </div>
-    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center">
+    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center bg-[#ffffff]">
       <span  className="text-[18px] font-bold text-[#fb2e86]"> <p>Cantilever chair</p> </span>
       <p className="text-[14px]">Code - Y523201</p>
       <div className="flex space-x-2 items-center justify-center">
@@ -44,7 +44,7 @@ const Secondblock = () => {
   </div>
 
   {/* 2nd item */}
-  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px]">
+  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px] bg-[#f6f7fb]">
     <div className="flex space-x-3 justify-start items-start mt-8">
       <BsCart className="w-[19px] h-[19px] text-[#2f1ac4]" />
       <FaRegHeart className="w-[17px] h-[17px] text-[#1aa8ee]" />
@@ -67,11 +67,11 @@ const Secondblock = () => {
   </div>
 
   {/* 3rd item */}
-  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px]">
+  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px] bg-[#f6f7fb]" >
     <div className="mt-12">
       <img src="/image 1169.png" alt="phone logo" className="w-[175px] h-[175px]" />
     </div>
-    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center">
+    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center bg-[#ffffff]">
       <p className="text-[18px] text-[#fb2e86] font-bold">Cantilever chair</p>
       <p className="text-[14px]">Code - Y523201</p>
       <div className="flex space-x-2 items-center justify-center">
@@ -84,11 +84,11 @@ const Secondblock = () => {
   </div>
 
   {/* 4th item */}
-  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px]">
+  <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px] bg-[#f6f7fb]">
     <div className="mt-12">
       <img src="/image 3.png" alt="phone logo" className="w-[216px] h-[151px]" />
     </div>
-    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center">
+    <div className="flex flex-col text-[#151875] w-full space-y-2 p-2 text-center bg-[#ffffff]">
       <p className="text-[18px] font-bold text-[#fb2e86] ">Cantilever chair</p>
       <p className="text-[14px]">Code - Y523201</p>
       <div className="flex space-x-2 items-center justify-center">
