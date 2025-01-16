@@ -111,7 +111,7 @@ const Secondblock = () => {
       </h1>
 
  <div
-  className={`${lato.className} flex text-center items-center justify-center text-[18px] w-full h-[22px] rounded-[1px]`}
+  className={`${lato.className} flex text-center items-center justify-center text-[18px] w-full h-[22px] rounded-[1px] mb-5`}
 >
 <ul className="flex flex-row justify-center items-center text-center space-x-8 mt-[30px]">
   <li>
