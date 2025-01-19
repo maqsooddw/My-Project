@@ -15,12 +15,12 @@ interface ThirdblockProps {
 
 const Thirdblock: React.FC<ThirdblockProps> = ({ images }) => {
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center'>
+    <div className='flex flex-col md:flex-row items-center justify-center user-xl:justify-evenly user-lg:justify-evenly user-md:justify-evenly'>
       {/* Main div for the three images */}
       {images.map((image, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center w-full sm:w-[360px]
+          className="flex flex-col items-center justify-center  w-full sm:w-[360px]
            h-fit lg:w-[360px] lg:h-[306px] lg:mr-2  mt-5 bg-[#f7f7f7] "
         >
           {/* Render additional overlay image if provided */}

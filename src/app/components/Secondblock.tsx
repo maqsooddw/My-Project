@@ -25,7 +25,7 @@ const Secondblock = () => {
       >
         Featured Products
       </h3>
-      <div className="flex flex-wrap justify-center gap-4 lg:h-[361px] md:h-auto md:w-auto relative bg-gre">
+      <div className="flex flex-wrap justify-center user-xl:justify-evenly user-lg:justify-evenly  gap-4 lg:h-[361px] md:h-auto md:w-auto relative bg-gre">
   {/* 1st item */}
   <div className="flex flex-col items-center justify-between w-[270px] sm:w-full lg:w-[270px] bg-[#f6f7fb] ">
     <div className="mt-12 ">

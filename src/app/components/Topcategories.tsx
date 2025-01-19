@@ -22,7 +22,7 @@ const Topcategories = () => {
 {/* heading div */}<div className={`${josefinSans.className} text-heading text-[42px] leading-[49.22px] text-center font-bold mt-12`}><h3>Top Categories</h3></div>
 
 
-{/* handiling all product div */} <div className='flex flex-wrap justify-center gap-6 items-center'>
+{/* handiling all product div */} <div className='flex flex-wrap justify-evenly items-center'>
 
 
 

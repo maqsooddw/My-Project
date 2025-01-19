@@ -22,7 +22,9 @@ export default function Home() {
 <Forthblock />
 <Fifthblock />
 <Trandingproducts />
-<DiscountItem />
+
+<DiscountItem /> 
+
 <Topcategories />
 <Blog />
 
