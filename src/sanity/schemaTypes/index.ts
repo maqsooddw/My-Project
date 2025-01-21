@@ -1,7 +1,7 @@
 import { appendFile } from 'fs'
 import { type SchemaTypeDefinition } from 'sanity'
-import product from './product'
+import api from '../api'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [product],
+  types: [api,],
 }
