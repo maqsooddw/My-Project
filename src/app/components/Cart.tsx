@@ -1,7 +1,7 @@
 "use client";
 
 
-import React from "react";
+import React, { useState } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Josefin_Sans } from 'next/font/google';
 import { Lato } from 'next/font/google';
@@ -35,9 +35,13 @@ interface CartProps {
   removeFromCart: (productId: string | number) => void;
 }
 
+
+
 export default function Cart({ cart, updateQuantity, removeFromCart }: CartProps) {
   return (
-    <div className="mt-8 p-4 bg-gray-100 rounded-lg">
+    <div className="mt-8 p-4rounded-lg flex justify-around ">
+
+    <div>
       <h2 className="text-lg font-bold">Shopping Cart ({cart.length})</h2>
 
       {cart.length > 0 ? (
@@ -45,9 +49,9 @@ export default function Cart({ cart, updateQuantity, removeFromCart }: CartProps
           <thead>
             <tr className={`${josefinSans.className} text-[20px] leading-[23.44px] text-[#1d3178]`}>
               <th className="p-2 text-left">Product</th>
-              <th className="p-2 text-left">Price</th>
-                         
+              <th className="p-2 text-left">Price</th>                         
               <th className="p-2 text-left">Quantity</th>
+              <th className="p-2 text-left">Total</th>
 
             </tr>
           </thead>
@@ -61,14 +65,14 @@ export default function Cart({ cart, updateQuantity, removeFromCart }: CartProps
 <div className="flex items-center gap-4"> {/* Add gap between child elements */}
 
   {/* Picture div and cross mark */}
-  <div className="flex relative w-[84px] h-[88px] bg-red-600">
+  <div className="flex relative w-[84px] h-[88px]">
     {/* Close icon positioned at the top-right corner */}
     <div className="absolute z-20 top-0 right-0">
       <IoMdCloseCircle />
     </div>
 
     {/* Image container */}
-    <div className="bg-yellow-200 absolute z-10">
+    <div className="absolute z-10">
       <img src={item.imageUrl} alt={item.name} width={83} height={87} />
     </div>
   </div>
@@ -105,14 +109,17 @@ export default function Cart({ cart, updateQuantity, removeFromCart }: CartProps
                
   
                 <td className="p-2">
-                  <div className="flex items-center space-x-2">
+                  <div className="flex items-center space-x-2 bg-[#f0eff2] h-4 w-fit">
                     <button
                       onClick={() => updateQuantity(item._id, item.quantity + 1)}
                       className="flex justify-center items-center bg-[#e7e7ef] text-[#b3b4b7] px-2 py-1 w-[12px] h-[15px] rounded"
                     >
                       +
                     </button>
-                    <p className={`${josefinSans.className} bg-[#f0eff2] text-[#b3b4b7] text-[12px] leading-[14.06]`}>{item.quantity}</p>
+
+                  <span className={`${josefinSans.className}  text-[#b3b4b7] text-[12px] leading-[14.06] h-fit`}>{item.quantity}</span>
+                    
+                    
                     <button
                       onClick={() => updateQuantity(item._id, item.quantity - 1)}
                       className="flex justify-center items-center bg-[#e7e7ef] text-[#b3b4b7] px-2 py-1 w-[12px] h-[15px] rounded"
@@ -121,14 +128,37 @@ export default function Cart({ cart, updateQuantity, removeFromCart }: CartProps
                     </button>
                   </div>
                 </td>
+
+                <td className={`${josefinSans.className} text-[14px] leading-[16.46px] text-[#334072]`}>
+  {(((item.price - (item.price * item.discountPercentage) / 100)*item.quantity).toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }))}
+</td>
+
           
               </tr>
             ))}
           </tbody>
         </table>
+
+
+
+
+
       ) : (
         <p className="text-gray-500">Your cart is empty.</p>
       )}
+</div>
+      <div className={`${josefinSans.className} text-[20px] leading-[23.44px]  text-[#1d3178] font-bold text-center`}> Cart Total 
+      <div className="mt-10 mb-10 w-[371px] h-[284px] bg-[#f4f4fc]">
+        <div className="flex justify-between p-5 mt-5 border-black">
+            <div className={`${lato.className} text-[18px] leading-[21.6px]  text-[#1d3178] font-semibold`}>Subtotals:</div>
+            <div className={`${lato.className} text-[16px] leading-[19.2px]  text-[#1d3178] font-semibold`}>£219.00</div>
+        </div>
+        </div> </div>
     </div>
-  );
+  ); 
 }
